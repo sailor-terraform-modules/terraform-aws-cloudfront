@@ -114,3 +114,7 @@ variable "signing_protocol" {
   type        = string
   description = " Determines how CloudFront signs (authenticates) requests."
 }
+variable "web_acl_id" {
+  type        = string
+  description = "Unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution."
+}

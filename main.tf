@@ -37,6 +37,7 @@ resource "aws_cloudfront_distribution" "cloudfront_distribution" {
     max_ttl                = var.max_ttl
   }
   price_class = var.price_class
+  web_acl_id  = var.web_acl_id
   restrictions {
     geo_restriction {
       restriction_type = var.restriction_type
