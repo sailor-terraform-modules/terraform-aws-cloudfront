@@ -90,3 +90,7 @@ variable "cloudfront_default_certificate" {
   type        = bool
   description = " if you want viewers to use HTTPS to request your objects and you're using the CloudFront domain name for your distribution."
 }
+variable "region" {
+  type        = string
+  description = "region"
+}
