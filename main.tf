@@ -1,7 +1,15 @@
+resource "aws_cloudfront_origin_access_control" "origin_access_control" {
+  name                              = var.access_name
+  description                       = var.description
+  origin_access_control_origin_type = var.origin_access_control_origin_type
+  signing_behavior                  = var.signing_behavior
+  signing_protocol                  = var.signing_protocol
+}
+
 resource "aws_cloudfront_distribution" "cloudfront_distribution" {
   origin {
     domain_name              = var.origin_domain_name
-    origin_access_control_id = var.origin_access_control_id
+    origin_access_control_id = aws_cloudfront_origin_access_control.origin_access_control.id
     origin_id                = var.origin_id
   }
   enabled             = var.enabled

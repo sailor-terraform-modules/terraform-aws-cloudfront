@@ -94,3 +94,23 @@ variable "region" {
   type        = string
   description = "region"
 }
+variable "access_name" {
+  type        = string
+  description = " A name that identifies the Origin Access Control."
+}
+variable "description" {
+  type        = string
+  description = " The description of the Origin Access Control."
+}
+variable " origin_access_control_origin_type" {
+  type        = string
+  description = "The type of origin that this Origin Access Control is for. "
+}
+variable "signing_behavior" {
+  type        = string
+  description = "Specifies which requests CloudFront signs."
+}
+variable "signing_protocol" {
+  type        = string
+  description = " Determines how CloudFront signs (authenticates) requests."
+}
