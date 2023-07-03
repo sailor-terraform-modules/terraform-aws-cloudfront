@@ -102,7 +102,7 @@ variable "description" {
   type        = string
   description = " The description of the Origin Access Control."
 }
-variable " origin_access_control_origin_type" {
+variable "origin_access_control_origin_type" {
   type        = string
   description = "The type of origin that this Origin Access Control is for. "
 }
